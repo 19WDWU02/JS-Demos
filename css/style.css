@@ -1,0 +1,172 @@
+@font-face {
+  font-family: myCustomFont;
+  src: url(../katherine/Katherine_Free.otf);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'myCustomFont'; */
+}
+
+#pageContainer{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#tabContainer{
+    list-style: none;
+    border-bottom: 1px solid #95a5a6;
+}
+
+#tabContainer::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.tab{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 15px;
+    border-left: 1px solid #95a5a6;
+    background-color: #ecf0f1;
+    text-transform: uppercase;
+}
+
+.tab:hover{
+    background-color: #95a5a6;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #34495e !important;
+    color: white;
+}
+
+#tabContainer .tab:last-child{
+    border-right: 1px solid #95a5a6;
+}
+
+.tabContent{
+    background-color: #ecf0f1;
+    border: 1px solid #95a5a6;
+    padding: 15px;
+
+}
+
+.hidden{
+    display: none;
+}
+
+
+#nav{
+    height: 50px;
+    background-color: #27ae60;
+    padding: 10px;
+}
+
+#nav::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.menu{
+    float: right;
+}
+
+.menu i{
+    font-size: 30px;
+    color: white;
+}
+
+.menu i:hover{
+    color: black;
+    cursor: pointer;
+}
+
+#hiddenNav{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s;
+}
+
+.navOpen{
+    left: 0 !important;
+}
+
+#hiddenNav ul{
+    list-style: none;
+    text-align: center;
+}
+
+#hiddenNav ul li{
+    color: white;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.close{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 50px;
+    color: white;
+}
+
+.close:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.progress{
+    height: 30px;
+    margin-top: 20px;
+    background-color: #ecf0f1;
+    position: relative;
+    overflow: hidden;
+}
+
+.progressbar{
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 0%;
+    height: inherit;
+    background-color: #1abc9c;
+    transform: skewX(-25deg);
+    transition: width 2s;
+}
+
+.toggleView{
+    float: left;
+}
+
+.toggleView i{
+    font-size: 30px;
+    color: white;
+}
+
+.toggleView i:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.day{
+    background-color: #f1c40f;
+}
+
+.night{
+    background-color: #2c3e50;
+}
